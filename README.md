@@ -15,8 +15,8 @@ python organizer.py [-p PATH] [-r] [-t]
 
 ### Options
 
-| Flag | Long form      | Description                                                        | Default            |
-|------|----------------|---------------------------------------------------------------------|---------------------|
+| Flag | Long form      | Description                                                         | Default              |
+|------|----------------|---------------------------------------------------------------------|--------------------- |
 | `-p` | `--path`       | Folder to organize                                                  | `~/Downloads`        |
 | `-r` | `--recursive`  | Also organize files inside sub-folders, not just the top level      | Off (top-level only) |
 | `-t` | `--test`       | Dry run — print what would be moved without moving anything         | Off                  |
@@ -30,7 +30,7 @@ python organizer.py
 
 Organize a specific folder, including its subfolders:
 ```bash
-python organizer.py -p ~/Desktop/Messy -r
+python organizer.py -p ~/Desktop/Test -r
 ```
 
 Preview what a run would do, without moving any files:
@@ -42,16 +42,16 @@ python organizer.py -p ~/Downloads -t
 
 The script scans the target folder and sorts files into these categories based on extension:
 
-| Category   | Extensions |
-|------------|------------|
-| Images     | `.png`, `.jpg`, `.jpeg`, `.gif`, `.bmp`, `.svg`, `.webp` |
-| Documents  | `.pdf`, `.txt`, `.docx`, `.doc`, `.odt`, `.rtf`, `.md` |
-| Videos     | `.mp4`, `.mkv`, `.mov`, `.avi` |
-| Audio      | `.mp3`, `.wav`, `.flac`, `.aac`, `.m4a` |
-| Archives   | `.zip`, `.tar`, `.gz`, `.rar`, `.7z` |
+| Category   | Extensions                                                    |
+|------------|---------------------------------------------------------------|
+| Images     | `.png`, `.jpg`, `.jpeg`, `.gif`, `.bmp`, `.svg`, `.webp`      |
+| Documents  | `.pdf`, `.txt`, `.docx`, `.doc`, `.odt`, `.rtf`, `.md`        |
+| Videos     | `.mp4`, `.mkv`, `.mov`, `.avi`                                |
+| Audio      | `.mp3`, `.wav`, `.flac`, `.aac`, `.m4a`                       |
+| Archives   | `.zip`, `.tar`, `.gz`, `.rar`, `.7z`                          |
 | Code       | `.py`, `.cpp`, `.c`, `.java`, `.js`, `.html`, `.css`, `.json` |
-| Installers | `.exe`, `.msi`, `.apk`, `.dmg` |
-| Others     | anything not listed above |
+| Installers | `.exe`, `.msi`, `.apk`, `.dmg`                                |
+| Others     | anything not listed above                                     |
 
 If a file with the same name already exists in the destination folder, the script appends a counter (e.g. `photo_1.png`) instead of overwriting it.
 
